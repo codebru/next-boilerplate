@@ -1,14 +1,21 @@
+import PropTypes from 'prop-types';
 import Link from 'next/link';
 
 function HeaderLink(props) {
+  const { link, title } = props;
   return (
     <li>
-      <Link href={props.link}>
-        <a>{props.title}</a>
+      <Link href={link}>
+        <a>{title}</a>
       </Link>
     </li>
   );
 }
+
+HeaderLink.propTypes = {
+  title: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+};
 
 function Header() {
   return (

@@ -1,5 +1,4 @@
-import Layout from '../components/Layout'
-import Header from '../components/Header';
+import Layout from '../components/Layout';
 import BlogList from '../components/Blog/List';
 
 function Index() {

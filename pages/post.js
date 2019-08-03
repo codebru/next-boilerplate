@@ -1,4 +1,4 @@
-import { useRouter  } from 'next/router';
+import { useRouter } from 'next/router';
 import Layout from '../components/Layout';
 
 function Post() {
@@ -10,6 +10,6 @@ function Post() {
       <p>This is the blog post content.</p>
     </Layout>
   );
-};
+}
 
 export default Post;

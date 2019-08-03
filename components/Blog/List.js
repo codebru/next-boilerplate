@@ -1,14 +1,20 @@
+import PropTypes from 'prop-types';
 import Link from 'next/link';
 
 function PostLink(props) {
+  const { title } = props;
   return (
     <li>
-      <Link href={`/post?title=${props.title}`}>
-        <a>{props.title}</a>
+      <Link href={`/post?title=${title}`}>
+        <a>{title}</a>
       </Link>
     </li>
   );
 }
+
+PostLink.propTypes = {
+  title: PropTypes.string.isRequired,
+};
 
 function BlogList() {
   return (

@@ -1,16 +1,18 @@
+import PropTypes from 'prop-types';
 import Header from './Header';
 import Footer from './Footer';
 
 /* This will allow for a global style later */
 
-function Layout(props){
+function Layout(props) {
+  const { children } = props;
   return (
     <div>
       <header>
         <Header />
       </header>
       <main>
-        {props.children}
+        {children}
       </main>
       <footer>
         <Footer />
@@ -18,5 +20,9 @@ function Layout(props){
     </div>
   );
 }
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export default Layout;
